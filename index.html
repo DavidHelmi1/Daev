@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>David Helmi Bahari | IT Infrastructure & Technical Support Engineer</title>
+<meta name="description" content="IT Infrastructure & Technical Support Engineer specializing in IT infrastructure, networking, system administration, technical support, and IT operations.">
+<meta property="og:title" content="David Helmi Bahari | IT Infrastructure & Technical Support Engineer">
+<meta property="og:description" content="IT Infrastructure & Technical Support Engineer specializing in IT infrastructure, networking, system administration, technical support, and IT operations.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-scanline" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">DAVID<span class="cursor">_</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-section="about">ABOUT</a>
+      <a href="#experience" data-section="experience">EXPERIENCE</a>
+      <a href="#skills" data-section="skills">SKILLS</a>
+      <a href="#infrastructure" data-section="infrastructure">INFRASTRUCTURE</a>
+      <a href="#projects" data-section="projects">PROJECTS</a>
+      <a href="#contact" data-section="contact">CONTACT</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="live-dot"></span> SYSTEM ONLINE
+        <span class="hero-badge-sep">|</span>
+        Infrastructure Availability: <strong>99.9%</strong>
+      </div>
+
+      <p class="eyebrow">IT INFRASTRUCTURE&nbsp;|&nbsp;NETWORK&nbsp;|&nbsp;SYSTEM ADMINISTRATION&nbsp;|&nbsp;IT OPERATIONS</p>
+      <h1 class="hero-title">DAVID HELMI BAHARI</h1>
+      <p class="hero-role">IT Infrastructure &amp; Technical Support Engineer</p>
+      <p class="hero-subtitle">Building Reliable Infrastructure. Solving Technical Problems. Supporting Business Operations.</p>
+
+      <div class="hero-cta">
+        <a href="#infrastructure" class="btn btn-primary">View Infrastructure</a>
+        <button class="btn btn-ghost" id="downloadCvBtn">Download CV</button>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ LIVE SYSTEM STATUS ============ -->
+  <section class="section" id="status">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">LIVE MONITORING</span>
+        <h2>INFRASTRUCTURE STATUS</h2>
+        <p class="section-sub">Simulated dashboard visualization for portfolio purposes — not a live production feed.</p>
+      </div>
+
+      <div class="status-grid">
+        <div class="status-card reveal">
+          <div class="status-card-top"><span class="status-name">CPU</span><span class="status-chip ok">Normal</span></div>
+          <div class="status-meter"><div class="status-meter-fill" data-fill="42" style="--w:0%"></div></div>
+          <span class="status-value" data-count-to="42" data-suffix="%">0%</span>
+        </div>
+        <div class="status-card reveal">
+          <div class="status-card-top"><span class="status-name">Memory</span><span class="status-chip ok">Optimal</span></div>
+          <div class="status-meter"><div class="status-meter-fill" data-fill="68" style="--w:0%"></div></div>
+          <span class="status-value" data-count-to="68" data-suffix="%">0%</span>
+        </div>
+        <div class="status-card reveal">
+          <div class="status-card-top"><span class="status-name">Network</span><span class="status-chip ok">Connected</span></div>
+          <div class="status-meter"><div class="status-meter-fill" data-fill="76" style="--w:0%"></div></div>
+          <span class="status-value" data-decimal-to="1.2" data-suffix=" Gbps">0 Gbps</span>
+        </div>
+        <div class="status-card reveal">
+          <div class="status-card-top"><span class="status-name">Servers</span><span class="status-chip ok">Operational</span></div>
+          <div class="status-meter"><div class="status-meter-fill" data-fill="100" style="--w:0%"></div></div>
+          <span class="status-value" data-count-to="99" data-suffix=".9% uptime">0% uptime</span>
+        </div>
+        <div class="status-card reveal">
+          <div class="status-card-top"><span class="status-name">Backup</span><span class="status-chip ok">Protected</span></div>
+          <div class="status-meter"><div class="status-meter-fill" data-fill="100" style="--w:0%"></div></div>
+          <span class="status-value">Last sync: 04:00</span>
+        </div>
+        <div class="status-card reveal">
+          <div class="status-card-top"><span class="status-name">Security</span><span class="status-chip ok">Active</span></div>
+          <div class="status-meter"><div class="status-meter-fill" data-fill="94" style="--w:0%"></div></div>
+          <span class="status-value" data-count-to="0" data-suffix=" threats detected">0 threats detected</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section section-alt" id="about">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">01 // ABOUT ME</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="terminal-window reveal">
+          <div class="terminal-head">
+            <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
+            <span class="frame-title">whoami.sh</span>
+          </div>
+          <div class="terminal-body mono">
+            <p><span class="prompt">&gt;</span> whoami</p>
+            <p class="out">David Helmi Bahari</p>
+            <p class="out-label">Role:</p>
+            <p class="out">IT Infrastructure &amp; Technical Support Engineer</p>
+            <p class="out-label">Experience:</p>
+            <p class="out">5+ Years</p>
+            <p class="out-label">Focus:</p>
+            <p class="out">Infrastructure&nbsp;/&nbsp;Networking&nbsp;/&nbsp;System Administration&nbsp;/&nbsp;Technical Support&nbsp;/&nbsp;IT Operations</p>
+            <p class="out-label">Status:</p>
+            <p class="out accent-text">AVAILABLE FOR NEW CHALLENGES</p>
+            <p class="term-cursor-line"><span class="prompt">&gt;</span> <span class="blink-cursor">_</span></p>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <h3>Professional Summary</h3>
+          <p>IT Infrastructure &amp; Technical Support professional with <strong>5+ years of experience</strong> in IT infrastructure, technical support, network administration, system implementation, asset management, and IT operations.</p>
+          <p>Experienced in maintaining reliable IT environments, troubleshooting hardware and software issues, managing network infrastructure, supporting end users, and coordinating IT vendors and operational requirements across healthcare and manufacturing environments.</p>
+          <div class="about-focus">
+            <span class="focus-chip">IT Infrastructure</span>
+            <span class="focus-chip">Network Administration</span>
+            <span class="focus-chip">System Administration</span>
+            <span class="focus-chip">Technical Support</span>
+            <span class="focus-chip">IT Operations</span>
+            <span class="focus-chip">IT Asset Management</span>
+            <span class="focus-chip">Infrastructure Monitoring</span>
+            <span class="focus-chip">Troubleshooting</span>
+            <span class="focus-chip">System Implementation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CORE EXPERTISE ============ -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">02 // CORE EXPERTISE</span>
+        <h2>What I Work With Every Day</h2>
+      </div>
+
+      <div class="expertise-grid">
+        <div class="expertise-card reveal">
+          <div class="expertise-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.4" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.4" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="7" r="0.9" fill="currentColor"/><circle cx="7" cy="17" r="0.9" fill="currentColor"/></svg>
+          </div>
+          <h4>Infrastructure</h4>
+          <ul>
+            <li>IT Infrastructure</li>
+            <li>Server Management</li>
+            <li>VMware</li>
+            <li>Synology NAS</li>
+            <li>Backup Management</li>
+            <li>Infrastructure Monitoring</li>
+          </ul>
+        </div>
+
+        <div class="expertise-card reveal">
+          <div class="expertise-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="4.5" r="1.6" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M12 6.1V12M12 12L5 17.5M12 12l7 5.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <h4>Networking</h4>
+          <ul>
+            <li>LAN / WAN</li>
+            <li>TCP/IP</li>
+            <li>DHCP</li>
+            <li>DNS</li>
+            <li>MikroTik</li>
+            <li>Network Troubleshooting</li>
+          </ul>
+        </div>
+
+        <div class="expertise-card reveal">
+          <div class="expertise-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3.5" width="16" height="11" rx="1.4" stroke="currentColor" stroke-width="1.6"/><path d="M9 19.5h6M12 14.5v5" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <h4>System</h4>
+          <ul>
+            <li>Windows</li>
+            <li>Windows Server</li>
+            <li>System Administration</li>
+            <li>User Management</li>
+            <li>File Sharing</li>
+            <li>Access Control</li>
+          </ul>
+        </div>
+
+        <div class="expertise-card reveal">
+          <div class="expertise-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3.2v5.4c0 4.4-3 7.9-7 9.2-4-1.3-7-4.8-7-9.2V6.2L12 3z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12.2l2.1 2.1 4-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Technical Support</h4>
+          <ul>
+            <li>Hardware Troubleshooting</li>
+            <li>Software Troubleshooting</li>
+            <li>End User Support</li>
+            <li>Incident Management</li>
+            <li>Root Cause Analysis</li>
+          </ul>
+        </div>
+
+        <div class="expertise-card reveal">
+          <div class="expertise-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5v4.7l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h4>IT Operations</h4>
+          <ul>
+            <li>IT Asset Management</li>
+            <li>Vendor Management</li>
+            <li>IT Documentation</li>
+            <li>System Implementation</li>
+            <li>Operational Support</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Skills radar -->
+      <div class="radar-wrap reveal">
+        <div class="radar-canvas-holder">
+          <canvas id="radarCanvas" width="420" height="420"></canvas>
+        </div>
+        <div class="radar-legend">
+          <h3>Skill Matrix — Self Assessment</h3>
+          <p class="section-sub">A relative view of focus areas, not a formal certification score.</p>
+          <ul class="radar-list">
+            <li><span></span>Infrastructure</li>
+            <li><span></span>Networking</li>
+            <li><span></span>System Administration</li>
+            <li><span></span>Technical Support</li>
+            <li><span></span>IT Operations</li>
+            <li><span></span>Asset Management</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tech stack -->
+      <div class="techstack reveal">
+        <h3 class="techstack-title">TECH STACK</h3>
+        <div class="tech-grid" id="techGrid"></div>
+        <div class="tech-tooltip" id="techTooltip"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section section-alt" id="experience">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">03 // EXPERIENCE TIMELINE</span>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><span class="pulse-dot"></span></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <span class="log-tag log-tag-live">CURRENT</span>
+              <span class="timeline-date">2026 — Present</span>
+            </div>
+            <h3>IT Support Technical Service</h3>
+            <p class="timeline-org">PT Samco Farma</p>
+            <ul>
+              <li>IT infrastructure support</li>
+              <li>Hardware &amp; software troubleshooting</li>
+              <li>Network maintenance</li>
+              <li>End-user support</li>
+              <li>IT asset management</li>
+              <li>Operational IT support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><span class="static-dot"></span></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <span class="log-tag">ARCHIVED</span>
+              <span class="timeline-date">2021 — 2026</span>
+            </div>
+            <h3>IT Infrastructure &amp; General Affair</h3>
+            <p class="timeline-org">Laboratorium &amp; Klinik Utama ScanMe Labs <span class="org-alt">(PT Anugrah Prakarsa Hutama)</span></p>
+            <ul>
+              <li>Infrastructure management</li>
+              <li>Network maintenance</li>
+              <li>Synology NAS administration</li>
+              <li>Backup management</li>
+              <li>Hardware/software troubleshooting</li>
+              <li>IT asset management</li>
+              <li>Vendor coordination</li>
+              <li>End-user support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="section-head reveal" style="margin-top:80px;">
+        <span class="tag-label">EDUCATION</span>
+      </div>
+      <div class="cred-grid reveal">
+        <div class="cred-col">
+          <h4 class="cred-heading">degrees/</h4>
+          <div class="cred-card">
+            <span class="cred-icon">🎓</span>
+            <div>
+              <h5>Universitas Bakrie</h5>
+              <p>Bachelor of Information Systems — GPA 3.29</p>
+              <span class="cred-date">Sep 2022 – Feb 2025</span>
+            </div>
+          </div>
+          <div class="cred-card">
+            <span class="cred-icon">🎓</span>
+            <div>
+              <h5>Politeknik Negeri Jember</h5>
+              <p>Associate Degree, Informatics Management — GPA 3.61</p>
+              <span class="cred-date">Jul 2017 – Oct 2020</span>
+            </div>
+          </div>
+        </div>
+        <div class="cred-col">
+          <h4 class="cred-heading">certifications/</h4>
+          <div class="cred-card">
+            <span class="cred-icon">📜</span>
+            <div>
+              <h5>Fortinet NSE Level 3: Certified Associate</h5>
+              <p>Fortinet Training Institute</p>
+            </div>
+          </div>
+          <div class="cred-card">
+            <span class="cred-icon">📜</span>
+            <div>
+              <h5>Network Support &amp; Security</h5>
+              <p>Cisco Networking Academy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INFRASTRUCTURE ARCHITECTURE ============ -->
+  <section class="section" id="infrastructure">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">04 // INFRASTRUCTURE ARCHITECTURE</span>
+        <h2>INFRASTRUCTURE ARCHITECTURE</h2>
+        <p class="section-sub">Click a node to inspect it. Data packets are animated for illustration.</p>
+      </div>
+
+      <div class="infra-wrap reveal">
+        <div class="infra-canvas-holder">
+          <canvas id="infraCanvas"></canvas>
+        </div>
+        <div class="infra-panel" id="infraPanel">
+          <div class="infra-panel-head">
+            <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
+            <span class="frame-title">device_info.log</span>
+          </div>
+          <div class="infra-panel-body mono" id="infraPanelBody">
+            <p class="out-label">SELECT A NODE</p>
+            <p class="out muted">Click any device in the diagram to view its role and status.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section section-alt" id="projects">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">05 // PROJECTS &amp; RESPONSIBILITIES</span>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-status ok">Ongoing</div>
+          <h3>IT Infrastructure Management</h3>
+          <p>Infrastructure monitoring, maintenance, troubleshooting, and operational support across server and network environments.</p>
+          <div class="project-meta">
+            <span><b>Role:</b> IT Infrastructure Engineer</span>
+            <span><b>Impact:</b> Sustained 24/7 infrastructure availability</span>
+          </div>
+          <div class="project-tags"><span>VMware</span><span>Windows Server</span><span>Monitoring</span></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-status ok">Ongoing</div>
+          <h3>Synology NAS &amp; Backup</h3>
+          <p>File sharing, access control, backup management, and storage administration for business-critical data.</p>
+          <div class="project-meta">
+            <span><b>Role:</b> Storage &amp; Backup Administrator</span>
+            <span><b>Impact:</b> Reliable recovery &amp; data protection</span>
+          </div>
+          <div class="project-tags"><span>Synology NAS</span><span>Backup &amp; Recovery</span><span>Access Control</span></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-status ok">Ongoing</div>
+          <h3>Network Infrastructure</h3>
+          <p>LAN/WAN implementation, MikroTik configuration, TCP/IP, DHCP, DNS, and day-to-day network troubleshooting.</p>
+          <div class="project-meta">
+            <span><b>Role:</b> Network Administrator</span>
+            <span><b>Impact:</b> Stable, secure connectivity</span>
+          </div>
+          <div class="project-tags"><span>MikroTik</span><span>TCP/IP</span><span>DHCP/DNS</span></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-status ok">Completed</div>
+          <h3>System Implementation</h3>
+          <p>Implementation and support of business applications and operational systems, including hospital information systems.</p>
+          <div class="project-meta">
+            <span><b>Role:</b> Implementation Support</span>
+            <span><b>Impact:</b> Smoother operational workflows</span>
+          </div>
+          <div class="project-tags"><span>SIMRS/LIS</span><span>Talenta Mekari</span><span>Coordination</span></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-status ok">Ongoing</div>
+          <h3>IT Asset Management</h3>
+          <p>Asset inventory, lifecycle management, monitoring, and end-user device management across 100+ IT devices.</p>
+          <div class="project-meta">
+            <span><b>Role:</b> Asset &amp; Operations Coordinator</span>
+            <span><b>Impact:</b> Accurate, auditable asset control</span>
+          </div>
+          <div class="project-tags"><span>Asset Tracking</span><span>Vendor Mgmt</span><span>Documentation</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INCIDENT RESPONSE ============ -->
+  <section class="section" id="incident">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">06 // INCIDENT RESPONSE</span>
+        <h2>How I Work Through a Problem</h2>
+        <p class="section-sub">Illustrative example ticket — a simulation to demonstrate troubleshooting process, not a real live incident.</p>
+      </div>
+
+      <div class="incident-wrap reveal">
+        <div class="incident-ticket mono">
+          <div class="incident-head">
+            <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
+            <span class="frame-title">incident_IT-2026-081.log</span>
+          </div>
+          <div class="incident-body">
+            <p><span class="out-label">INCIDENT</span> #IT-2026-081</p>
+            <p><span class="out-label">STATUS</span> <span id="incidentStatus" class="accent-text">RESOLVED</span></p>
+            <p><span class="out-label">ISSUE</span> Network connectivity interruption</p>
+            <p><span class="out-label">DETECTION</span> 09:14</p>
+            <p><span class="out-label">ROOT CAUSE</span> Switch configuration issue</p>
+            <p><span class="out-label">ACTION</span> Configuration restored</p>
+            <p><span class="out-label">RESOLUTION</span> 09:27</p>
+            <p><span class="out-label">DOWNTIME</span> 13 Minutes</p>
+          </div>
+        </div>
+
+        <div class="incident-stepper">
+          <div class="step" data-step="0"><span class="step-dot"></span><span>DETECTED</span></div>
+          <div class="step" data-step="1"><span class="step-dot"></span><span>ANALYZING</span></div>
+          <div class="step" data-step="2"><span class="step-dot"></span><span>TROUBLESHOOTING</span></div>
+          <div class="step" data-step="3"><span class="step-dot"></span><span>RESOLVED</span></div>
+          <button class="btn btn-ghost btn-sm" id="replayIncident">Replay Simulation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TERMINAL ============ -->
+  <section class="section section-alt" id="terminal-section">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">07 // INTERACTIVE TERMINAL</span>
+      </div>
+
+      <div class="terminal-window terminal-interactive reveal" id="terminalWindow">
+        <div class="terminal-head">
+          <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
+          <span class="frame-title">david@infrastructure:~</span>
+        </div>
+        <div class="terminal-body mono" id="terminalOutput">
+          <p class="out muted">Type <span class="accent-text">help</span> to see available commands.</p>
+        </div>
+        <div class="terminal-input-row mono">
+          <span class="prompt">david@infrastructure:~$</span>
+          <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal command input">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NETWORK ACTIVITY ============ -->
+  <section class="section" id="activity">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">08 // NETWORK ACTIVITY</span>
+        <p class="section-sub">Simulated log for portfolio visualization — not a connection to real infrastructure.</p>
+      </div>
+      <div class="activity-log reveal mono" id="activityLog"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-alt" id="contact">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag-label">09 // ESTABLISH CONNECTION</span>
+        <h2>ESTABLISH CONNECTION</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a class="contact-item" href="mailto:david.helmibahari@gmail.com" id="emailLink">
+            <span class="ci-label">Email</span>
+            <span class="ci-value">david.helmibahari@gmail.com</span>
+            <span class="ci-action">copy</span>
+          </a>
+          <a class="contact-item" href="https://linkedin.com/in/davidhelmi" target="_blank" rel="noopener">
+            <span class="ci-label">LinkedIn</span>
+            <span class="ci-value">linkedin.com/in/davidhelmi</span>
+            <span class="ci-action">open</span>
+          </a>
+          <a class="contact-item" href="tel:+6285816914722">
+            <span class="ci-label">Phone</span>
+            <span class="ci-value">0858-1691-4722</span>
+            <span class="ci-action">call</span>
+          </a>
+          <div class="contact-item contact-item-static">
+            <span class="ci-label">Location</span>
+            <span class="ci-value">Kota Tangerang, Indonesia</span>
+            <span class="ci-action">—</span>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <label>Name<input type="text" name="name" required></label>
+          <label>Email<input type="email" name="email" required></label>
+          <label>Message<textarea name="message" rows="4" required></textarea></label>
+          <button type="submit" class="btn btn-primary btn-block">SEND TRANSMISSION</button>
+          <p class="form-note">Opens your email client with the message pre-filled — no data is stored or sent to a server.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer mono">
+  <div class="footer-inner">
+    <p class="footer-status"><span class="live-dot small"></span> SYSTEM STATUS: ONLINE</p>
+    <p class="footer-name">DAVID HELMI BAHARI</p>
+    <p class="footer-role">IT Infrastructure &amp; Technical Support Engineer</p>
+    <p class="footer-copy">© 2026 David Helmi Bahari</p>
+    <p class="footer-tag">BUILDING • MAINTAINING • TROUBLESHOOTING</p>
+  </div>
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+</footer>
+
+<div class="toast" id="toast">Copied to clipboard</div>
+
+<script src="script.js"></script>
+</body>
+</html>
