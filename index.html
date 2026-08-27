@@ -1,596 +1,1588 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>David Helmi Bahari | IT Infrastructure & Technical Support Engineer</title>
-<meta name="description" content="IT Infrastructure & Technical Support Engineer specializing in IT infrastructure, networking, system administration, technical support, and IT operations.">
-<meta property="og:title" content="David Helmi Bahari | IT Infrastructure & Technical Support Engineer">
-<meta property="og:description" content="IT Infrastructure & Technical Support Engineer specializing in IT infrastructure, networking, system administration, technical support, and IT operations.">
-<meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IT Infrastructure & Support Engineer Portfolio">
+  <title>David Helmi Bahari — IT Infrastructure Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth
+}
+body {
+  margin:0;
+  background:#04070D;
+  color:#E8EDF7;
+  font-family:Inter,system-ui,sans-serif;
+  transition:.3s
+}
+body.light {
+  background:#F1F4FA;
+  color:#0B1220;
+  --bg:#F1F4FA;
+  --panel:#fff;
+  --panel2:#EDF1F8;
+  --border:#DCE3EF;
+  --text:#0B1220;
+  --muted:#57647E;
+  --grid:rgba(59,130,246,.07)
+}
+body.dark {
+  --bg:#04070D;
+  --panel:#0A101C;
+  --panel2:#0D1524;
+  --border:#1C2B42;
+  --text:#E8EDF7;
+  --muted:#7C8AA6;
+  --grid:rgba(56,189,248,.06)
+}
+a {
+  color:inherit;
+  text-decoration:none
+}
+button,input,textarea {
+  font:inherit
+}
+.mono {
+  font-family:"JetBrains Mono",monospace
+}
+.container {
+  width:min(1152px,calc(100% - 40px));
+  margin:auto
+}
+.navbar {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:50;
+  background:rgba(4,7,13,.78);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border)
+}
+body.light .navbar {
+  background:rgba(241,244,250,.86)
+}
+.nav-inner {
+  height:64px;
+  width:min(1152px,calc(100% - 40px));
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+.brand {
+  border:0;
+  background:none;
+  color:var(--text);
+  font:700 13px "JetBrains Mono";
+  cursor:pointer
+}
+.brand .icon {
+  color:#38BDF8;
+  font-size:18px;
+  margin-right:6px
+}
+.nav-actions {
+  display:flex;
+  gap:8px
+}
+.icon-btn {
+  border:1px solid var(--border);
+  background:transparent;
+  color:var(--text);
+  border-radius:7px;
+  padding:8px 10px;
+  cursor:pointer
+}
+.mobile-only {
+  display:none
+}
+#desktopNav {
+  display:flex;
+  gap:22px;
+  font:11px "JetBrains Mono";
+  text-transform:uppercase;
+  letter-spacing:.06em
+}
+#desktopNav button,.mobile-nav button {
+  border:0;
+  background:none;
+  color:var(--muted);
+  cursor:pointer;
+  position:relative
+}
+#desktopNav button.active,#desktopNav button:hover {
+  color:#38BDF8
+}
+#desktopNav button:after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:0;
+  height:2px;
+  background:#38BDF8;
+  transition:.2s
+}
+#desktopNav button.active:after,#desktopNav button:hover:after {
+  width:100%
+}
+.mobile-nav {
+  display:none
+}
+.hero {
+  position:relative;
+  padding:128px 0 75px;
+  overflow:hidden;
+  min-height:720px
+}
+.bp-grid {
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:42px 42px
+}
+.hero-glow {
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(56,189,248,.12),transparent 70%);
+  pointer-events:none
+}
+.hero canvas {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  opacity:.4;
+  pointer-events:none
+}
+.hero-grid {
+  position:relative;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:55px;
+  align-items:center
+}
+.hero h1 {
+  font-size:clamp(2.5rem,6vw,4.3rem);
+  line-height:1.05;
+  margin:0 0 16px;
+  letter-spacing:-.04em
+}
+.role {
+  color:#38BDF8;
+  font:18px "JetBrains Mono";
+  margin:0 0 22px
+}
+.tagline {
+  max-width:650px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.65;
+  margin:0 0 25px
+}
+.meta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px 24px;
+  color:var(--muted);
+  font:12px "JetBrains Mono";
+  margin-bottom:30px
+}
+.meta a:hover,.contact-links a:hover {
+  color:#38BDF8
+}
+.actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px
+}
+.primary,.secondary {
+  border-radius:7px;
+  padding:12px 19px;
+  cursor:pointer;
+  font-weight:700;
+  font-size:14px;
+  display:inline-flex;
+  gap:8px;
+  align-items:center
+}
+.primary {
+  border:1px solid #38BDF8;
+  background:#38BDF8;
+  color:#04121C
+}
+.secondary {
+  border:1px solid var(--border);
+  background:transparent;
+  color:var(--text)
+}
+.secondary:hover {
+  border-color:#38BDF8
+}
+.terminal {
+  border:1px solid var(--border);
+  border-radius:9px;
+  overflow:hidden;
+  background:rgba(13,21,36,.55);
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 0 1px rgba(56,189,248,.12),0 8px 30px -14px rgba(56,189,248,.35);
+  transition:.25s
+}
+.terminal:hover {
+  box-shadow:0 0 0 1px rgba(56,189,248,.35),0 12px 34px -12px rgba(56,189,248,.55)
+}
+.terminal-head {
+  height:39px;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:0 14px;
+  border-bottom:1px solid var(--border);
+  background:rgba(255,255,255,.02);
+  font:11px "JetBrains Mono";
+  color:var(--muted)
+}
+.terminal-head i {
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  display:block
+}
+.terminal-head i:nth-child(1) {
+  background:#FF5F56
+}
+.terminal-head i:nth-child(2) {
+  background:#FFBD2E
+}
+.terminal-head i:nth-child(3) {
+  background:#27C93F
+}
+.terminal-head span {
+  margin-left:8px
+}
+.terminal-body {
+  padding:18px
+}
+.mb-32 {
+  margin-bottom:32px;
+  max-width:600px
+}
+.hero-side {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:15px
+}
+.avatar {
+  width:min(220px,70vw);
+  aspect-ratio:1;
+  border:2px solid #38BDF8;
+  border-radius:12px;
+  position:relative;
+  overflow:hidden;
+  background:radial-gradient(circle at 50% 30%,rgba(56,189,248,.2),#060A12 75%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#38BDF8
+}
+.avatar svg {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  opacity:.25
+}
+.avatar strong {
+  font:700 55px "JetBrains Mono";
+  text-shadow:0 0 24px rgba(56,189,248,.7)
+}
+.scan {
+  position:absolute;
+  left:0;
+  right:0;
+  height:32px;
+  background:linear-gradient(transparent,rgba(56,189,248,.35),transparent);
+  animation:scan 2.6s linear infinite
+}
+.access {
+  font:11px "JetBrains Mono";
+  color:#22C55E
+}
+.topology {
+  width:min(300px,80vw);
+  aspect-ratio:1
+}
+.topology svg {
+  width:100%;
+  height:100%
+}
+.topology line {
+  stroke:#38BDF8;
+  stroke-width:1.5;
+  stroke-opacity:.45;
+  stroke-dasharray:6 6;
+  animation:dash 1.6s linear infinite
+}
+.topology circle {
+  fill:var(--panel2);
+  stroke:#38BDF8;
+  stroke-width:1.5;
+  animation:pulse 2.4s ease-in-out infinite
+}
+.topology text {
+  fill:#38BDF8;
+  text-anchor:middle;
+  font-size:16px
+}
+.scroll-down {
+  text-align:center;
+  color:var(--muted);
+  font-size:25px;
+  animation:bounce 1.5s infinite
+}
+.float-symbol {
+  position:absolute;
+  color:#38BDF8;
+  opacity:.18;
+  font-size:28px;
+  animation:float 5s ease-in-out infinite
+}
+.symbol-server {
+  left:5%;
+  top:110px
+}
+.symbol-cloud {
+  right:7%;
+  top:33%
+}
+.symbol-db {
+  left:25%;
+  bottom:60px
+}
+.status-section {
+  padding:38px 0;
+  background:var(--panel);
+  border-block:1px solid var(--border)
+}
+.eyebrow {
+  font:11px "JetBrains Mono";
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 15px
+}
+.status-grid {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px
+}
+.status-card {
+  padding:14px;
+  border:1px solid var(--border);
+  border-radius:9px;
+  background:rgba(255,255,255,.02)
+}
+.status-name {
+  font-weight:600;
+  font-size:12px
+}
+.status-state {
+  font:11px "JetBrains Mono";
+  margin-top:4px
+}
+.green {
+  color:#22C55E
+}
+.blue {
+  color:#38BDF8
+}
+.amber {
+  color:#FBBF24
+}
+.section {
+  padding:95px 0
+}
+.alternate {
+  background:var(--panel)
+}
+.section-label {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:40px
+}
+.section-label span {
+  font:11px "JetBrains Mono";
+  color:#38BDF8;
+  border:1px solid var(--border);
+  background:var(--panel2);
+  padding:6px 8px;
+  border-radius:5px
+}
+.section-label h2 {
+  font-size:30px;
+  margin:0;
+  letter-spacing:-.03em
+}
+.section-label hr {
+  height:1px;
+  border:0;
+  background:var(--border);
+  flex:1
+}
+.about-grid {
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:45px
+}
+.about-copy {
+  font:14px/1.8 "JetBrains Mono";
+  color:var(--muted)
+}
+.about-copy b {
+  color:#38BDF8
+}
+.about-copy strong {
+  color:var(--text)
+}
+.about-cards {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px
+}
+.about-card,.mini-card,.security-item,.cert-card,.stack-card,.achievement {
+  border:1px solid var(--border);
+  background:var(--panel2);
+  border-radius:8px;
+  padding:13px
+}
+.about-card {
+  font-size:12px;
+  font-weight:600
+}
+.about-card .ico {
+  color:#38BDF8;
+  font-size:18px;
+  display:block;
+  margin-bottom:7px
+}
+.timeline {
+  position:relative;
+  padding-left:32px
+}
+.timeline:before {
+  content:"";
+  position:absolute;
+  left:7px;
+  top:5px;
+  bottom:5px;
+  width:1px;
+  background:var(--border)
+}
+.experience {
+  position:relative;
+  margin-bottom:45px
+}
+.experience:last-child {
+  margin-bottom:0
+}
+.experience:before {
+  content:"";
+  position:absolute;
+  left:-32px;
+  top:5px;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:#38BDF8;
+  box-shadow:0 0 15px rgba(56,189,248,.5)
+}
+.exp-head {
+  display:flex;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:10px
+}
+.exp-head h3 {
+  font-size:18px;
+  margin:0
+}
+.period {
+  font:11px "JetBrains Mono";
+  color:#38BDF8
+}
+.company {
+  color:var(--muted);
+  font-size:13px;
+  margin:7px 0 12px
+}
+.experience ul {
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:13px
+}
+.experience li::marker {
+  color:#38BDF8
+}
+.dashboard-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px
+}
+.skill {
+  margin-bottom:16px
+}
+.skill:last-child {
+  margin-bottom:0
+}
+.skill-top {
+  display:flex;
+  justify-content:space-between;
+  font:11px "JetBrains Mono";
+  margin-bottom:5px
+}
+.skill-top b {
+  color:#38BDF8
+}
+.bar {
+  font:14px "JetBrains Mono";
+  color:#38BDF8;
+  letter-spacing:-2px
+}
+.bar .empty {
+  color:var(--border)
+}
+.mini-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px
+}
+.mini-card {
+  display:flex;
+  gap:7px;
+  align-items:center;
+  font-size:11px
+}
+.mini-card .ico {
+  color:#38BDF8
+}
+.security-list {
+  display:grid;
+  gap:9px
+}
+.security-item {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:11px
+}
+.security-item .left {
+  color:var(--text)
+}
+.active-badge {
+  font:10px "JetBrains Mono";
+  color:#22C55E;
+  background:rgba(34,197,94,.12);
+  padding:3px 6px;
+  border-radius:4px
+}
+.cloud-panel {
+  margin-top:22px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:22px;
+  background:rgba(255,255,255,.02)
+}
+.chips {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px
+}
+.chip {
+  border:1px solid var(--border);
+  background:var(--panel2);
+  border-radius:999px;
+  padding:6px 11px;
+  font:11px "JetBrains Mono";
+  color:var(--text)
+}
+.project-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px
+}
+.project-card {
+  height:100%;
+  display:flex;
+  flex-direction:column
+}
+.project-title {
+  font-weight:700;
+  margin:0 0 5px
+}
+.env {
+  font:10px "JetBrains Mono";
+  color:var(--muted);
+  margin-bottom:15px
+}
+.commands {
+  font:12px/1.8 "JetBrains Mono";
+  margin-bottom:14px
+}
+.commands b {
+  color:#38BDF8
+}
+.tech-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-bottom:15px
+}
+.tech-tag {
+  background:var(--panel2);
+  color:#38BDF8;
+  padding:5px 7px;
+  border-radius:4px;
+  font:10px "JetBrains Mono"
+}
+.project-status {
+  margin-top:auto;
+  border-top:1px solid var(--border);
+  padding-top:12px;
+  display:flex;
+  justify-content:space-between;
+  font:10px "JetBrains Mono";
+  color:var(--muted)
+}
+.status-badge {
+  padding:4px 7px;
+  border-radius:4px;
+  font-weight:700
+}
+.success-bg {
+  color:#22C55E;
+  background:rgba(34,197,94,.12)
+}
+.progress-bg {
+  color:#FBBF24;
+  background:rgba(251,191,36,.12)
+}
+.cert-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px
+}
+.cert-card {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px
+}
+.cert-name {
+  font-weight:600;
+  font-size:13px
+}
+.cert-year {
+  font:10px "JetBrains Mono";
+  color:var(--muted);
+  margin-top:4px
+}
+.cert-icon {
+  color:#38BDF8;
+  font-size:19px;
+  margin-right:10px
+}
+.cert-left {
+  display:flex;
+  align-items:center
+}
+.ext {
+  border:1px solid var(--border);
+  padding:7px;
+  border-radius:5px;
+  color:var(--muted)
+}
+.stack-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+.stack-card {
+  padding:20px
+}
+.stack-group {
+  font:11px "JetBrains Mono";
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:#38BDF8;
+  margin-bottom:12px
+}
+.stack-items {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px
+}
+.stack-item {
+  padding:7px 10px;
+  background:var(--panel2);
+  border-radius:5px;
+  font-size:13px
+}
+.achievements-wrap {
+  margin-top:75px
+}
+.achievement-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px
+}
+.achievement {
+  text-align:center;
+  padding:24px
+}
+.achievement .stat {
+  font:800 31px "JetBrains Mono";
+  margin:6px 0 10px
+}
+.achievement .desc {
+  font-size:11px;
+  line-height:1.5;
+  color:var(--muted)
+}
+.achievement .ico {
+  color:#38BDF8;
+  font-size:20px
+}
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1.3fr;
+  gap:55px
+}
+.contact-copy {
+  color:var(--muted);
+  line-height:1.7;
+  margin:0 0 28px
+}
+.contact-links {
+  display:grid;
+  gap:15px;
+  font-size:13px
+}
+.form-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px
+}
+form {
+  display:grid;
+  gap:12px
+}
+input,textarea {
+  width:100%;
+  border:1px solid var(--border);
+  background:var(--panel2);
+  color:var(--text);
+  padding:13px 14px;
+  border-radius:6px;
+  outline:none;
+  font-size:13px
+}
+input:focus,textarea:focus {
+  border-color:#38BDF8
+}
+textarea {
+  resize:vertical
+}
+form .primary {
+  justify-content:center;
+  width:max-content
+}
+.success {
+  font:12px "JetBrains Mono";
+  color:#22C55E
+}
+.hidden {
+  display:none
+}
+footer {
+  border-top:1px solid var(--border);
+  padding:35px 0
+}
+.footer-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px
+}
+.footer-inner b,.footer-inner small {
+  display:block
+}
+.footer-inner small {
+  color:var(--muted);
+  font-size:11px;
+  margin-top:4px
+}
+.social {
+  display:flex;
+  gap:18px;
+  font:11px "JetBrains Mono";
+  color:var(--muted)
+}
+.social a:hover {
+  color:#38BDF8
+}
+.reveal {
+  opacity:0;
+  transform:translateY(18px);
+  transition:.6s ease
+}
+.reveal.shown {
+  opacity:1;
+  transform:none
+}
+@keyframes scan {
+  0% {
+    top:-10%
+  }
+  100% {
+    top:110%
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset:-24
+  }
+}
+@keyframes pulse {
+  0%,100% {
+    opacity:.45
+  }
+  50% {
+    opacity:1
+  }
+}
+@keyframes float {
+  0%,100% {
+    transform:translateY(0)
+  }
+  50% {
+    transform:translateY(-14px)
+  }
+}
+@keyframes bounce {
+  50% {
+    transform:translateY(8px)
+  }
+}
+@media(max-width:900px) {
+  #desktopNav {
+    display:none
+  }
+  .mobile-only {
+    display:block
+  }
+  .mobile-nav {
+    padding:14px 20px;
+    border-top:1px solid var(--border);
+    background:var(--bg);
+    flex-direction:column;
+    gap:14px
+  }
+  .mobile-nav.open {
+    display:flex
+  }
+  .hero-grid {
+    grid-template-columns:1fr
+  }
+  .hero-side {
+    display:none
+  }
+  .status-grid {
+    grid-template-columns:repeat(3,1fr)
+  }
+  .dashboard-grid,.project-grid {
+    grid-template-columns:1fr
+  }
+  .stack-grid {
+    grid-template-columns:1fr 1fr
+  }
+  .achievement-grid {
+    grid-template-columns:1fr 1fr
+  }
+  .contact-grid {
+    grid-template-columns:1fr
+  }
+}
+@media(max-width:600px) {
+  .container,.nav-inner {
+    width:min(100% - 28px,1152px)
+  }
+  .hero {
+    padding-top:105px
+  }
+  .hero h1 {
+    font-size:2.6rem
+  }
+  .tagline {
+    font-size:15px
+  }
+  .meta {
+    font-size:10px
+  }
+  .actions>* {
+    width:100%;
+    justify-content:center
+  }
+  .status-grid {
+    grid-template-columns:1fr 1fr
+  }
+  .section {
+    padding:70px 0
+  }
+  .section-label h2 {
+    font-size:23px
+  }
+  .about-grid,.cert-grid {
+    grid-template-columns:1fr
+  }
+  .stack-grid,.achievement-grid {
+    grid-template-columns:1fr
+  }
+  .form-row {
+    grid-template-columns:1fr
+  }
+  .footer-inner {
+    flex-direction:column;
+    text-align:center
+  }
+  .social {
+    order:2
+  }
+  .symbol-server,.symbol-cloud,.symbol-db {
+    display:none
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  * {
+    scroll-behavior:auto!important;
+    animation:none!important;
+    transition:none!important
+  }
+}
+/* =========================================================
+   NETWORK DEFENDER — compact game module
+   Uses the existing portfolio's color system and components.
+   ========================================================= */
+.game-section {
+  overflow:hidden
+}
+.game-intro {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:25px;
+  margin:-12px 0 24px;
+}
+.game-intro h3 {
+  margin:0 0 8px;
+  font-size:clamp(26px,4vw,42px);
+  letter-spacing:-.04em;
+}
+.game-description {
+  max-width:650px;
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+.game-score {
+  min-width:125px;
+  padding:10px 13px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--panel2);
+  text-align:right;
+}
+.game-score span {
+  display:block;
+  color:var(--muted);
+  font:9px "JetBrains Mono";
+  letter-spacing:.12em;
+}
+.game-score b {
+  display:block;
+  margin-top:2px;
+  color:#22C55E;
+  font:700 20px "JetBrains Mono";
+}
+.game-shell {
+  position:relative;
+  height:min(580px,68vh);
+  min-height:420px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(56,189,248,.08),transparent 25%),
+    rgba(6,10,18,.88);
+  box-shadow:0 0 0 1px rgba(56,189,248,.06),0 18px 55px -30px rgba(56,189,248,.35);
+}
+#gameCanvas {
+  width:100%;
+  height:100%;
+  display:block;
+  cursor:crosshair
+}
+.game-hud {
+  position:absolute;
+  top:14px;
+  left:14px;
+  z-index:2;
+  display:flex;
+  gap:8px;
+  pointer-events:none;
+}
+.game-hud div {
+  min-width:72px;
+  padding:7px 9px;
+  border:1px solid rgba(56,189,248,.13);
+  border-radius:6px;
+  background:rgba(4,7,13,.65);
+  backdrop-filter:blur(8px);
+}
+.game-hud span {
+  display:block;
+  color:var(--muted);
+  font:8px "JetBrains Mono"
+}
+.game-hud b {
+  font:11px "JetBrains Mono";
+  color:var(--text)
+}
+#gameCore {
+  color:#22C55E
+}
+#gameThreat {
+  color:#38BDF8
+}
+.game-overlay {
+  position:absolute;
+  inset:0;
+  z-index:4;
+  display:grid;
+  place-content:center;
+  text-align:center;
+  background:rgba(4,7,13,.58);
+  backdrop-filter:blur(3px);
+}
+.game-overlay.hidden {
+  display:none
+}
+.game-kicker {
+  font:9px "JetBrains Mono";
+  letter-spacing:.16em;
+  color:#38BDF8
+}
+.game-overlay h3 {
+  margin:9px 0 7px;
+  font-size:clamp(24px,4vw,38px)
+}
+.game-overlay p {
+  margin:0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7
+}
+.game-overlay .primary {
+  margin:15px auto 0
+}
+.game-toast {
+  position:absolute;
+  left:50%;
+  top:50%;
+  z-index:3;
+  transform:translate(-50%,-50%);
+  color:#22C55E;
+  font:10px "JetBrains Mono";
+  letter-spacing:.14em;
+  opacity:0;
+  pointer-events:none;
+  text-shadow:0 0 12px rgba(34,197,94,.55);
+}
+@media(max-width:600px) {
+  .game-intro {
+    align-items:flex-start;
+    flex-direction:column
+  }
+  .game-score {
+    align-self:stretch;
+    text-align:left
+  }
+  .game-shell {
+    height:60vh;
+    min-height:430px
+  }
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+</style>
 </head>
-<body>
-
-<div class="bg-grid" aria-hidden="true"></div>
-<div class="bg-scanline" aria-hidden="true"></div>
-<div class="bg-glow" aria-hidden="true"></div>
-<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
-
-<!-- ============ NAV ============ -->
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#top" class="logo">DAVID<span class="cursor">_</span></a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about" data-section="about">ABOUT</a>
-      <a href="#experience" data-section="experience">EXPERIENCE</a>
-      <a href="#skills" data-section="skills">SKILLS</a>
-      <a href="#infrastructure" data-section="infrastructure">INFRASTRUCTURE</a>
-      <a href="#projects" data-section="projects">PROJECTS</a>
-      <a href="#contact" data-section="contact">CONTACT</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main id="top">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <canvas id="heroCanvas" aria-hidden="true"></canvas>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="live-dot"></span> SYSTEM ONLINE
-        <span class="hero-badge-sep">|</span>
-        Infrastructure Availability: <strong>99.9%</strong>
-      </div>
-
-      <p class="eyebrow">IT INFRASTRUCTURE&nbsp;|&nbsp;NETWORK&nbsp;|&nbsp;SYSTEM ADMINISTRATION&nbsp;|&nbsp;IT OPERATIONS</p>
-      <h1 class="hero-title">DAVID HELMI BAHARI</h1>
-      <p class="hero-role">IT Infrastructure &amp; Technical Support Engineer</p>
-      <p class="hero-subtitle">Building Reliable Infrastructure. Solving Technical Problems. Supporting Business Operations.</p>
-
-      <div class="hero-cta">
-        <a href="#infrastructure" class="btn btn-primary">View Infrastructure</a>
-        <button class="btn btn-ghost" id="downloadCvBtn">Download CV</button>
-        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+<body class="dark">
+  <header class="navbar">
+    <div class="nav-inner">
+      <button class="brand" data-scroll="hero"><span class="icon">⌘</span> root@david-server:~$</button>
+      <nav id="desktopNav"></nav>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">☀</button>
+        <button id="menuToggle" class="icon-btn mobile-only" aria-label="Toggle menu">☰</button>
       </div>
     </div>
-    <div class="scroll-cue" aria-hidden="true">
-      <span>scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
+    <nav id="mobileNav" class="mobile-nav"></nav>
+  </header>
 
-  <!-- ============ LIVE SYSTEM STATUS ============ -->
-  <section class="section" id="status">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">LIVE MONITORING</span>
-        <h2>INFRASTRUCTURE STATUS</h2>
-        <p class="section-sub">Simulated dashboard visualization for portfolio purposes — not a live production feed.</p>
-      </div>
-
-      <div class="status-grid">
-        <div class="status-card reveal">
-          <div class="status-card-top"><span class="status-name">CPU</span><span class="status-chip ok">Normal</span></div>
-          <div class="status-meter"><div class="status-meter-fill" data-fill="42" style="--w:0%"></div></div>
-          <span class="status-value" data-count-to="42" data-suffix="%">0%</span>
-        </div>
-        <div class="status-card reveal">
-          <div class="status-card-top"><span class="status-name">Memory</span><span class="status-chip ok">Optimal</span></div>
-          <div class="status-meter"><div class="status-meter-fill" data-fill="68" style="--w:0%"></div></div>
-          <span class="status-value" data-count-to="68" data-suffix="%">0%</span>
-        </div>
-        <div class="status-card reveal">
-          <div class="status-card-top"><span class="status-name">Network</span><span class="status-chip ok">Connected</span></div>
-          <div class="status-meter"><div class="status-meter-fill" data-fill="76" style="--w:0%"></div></div>
-          <span class="status-value" data-decimal-to="1.2" data-suffix=" Gbps">0 Gbps</span>
-        </div>
-        <div class="status-card reveal">
-          <div class="status-card-top"><span class="status-name">Servers</span><span class="status-chip ok">Operational</span></div>
-          <div class="status-meter"><div class="status-meter-fill" data-fill="100" style="--w:0%"></div></div>
-          <span class="status-value" data-count-to="99" data-suffix=".9% uptime">0% uptime</span>
-        </div>
-        <div class="status-card reveal">
-          <div class="status-card-top"><span class="status-name">Backup</span><span class="status-chip ok">Protected</span></div>
-          <div class="status-meter"><div class="status-meter-fill" data-fill="100" style="--w:0%"></div></div>
-          <span class="status-value">Last sync: 04:00</span>
-        </div>
-        <div class="status-card reveal">
-          <div class="status-card-top"><span class="status-name">Security</span><span class="status-chip ok">Active</span></div>
-          <div class="status-meter"><div class="status-meter-fill" data-fill="94" style="--w:0%"></div></div>
-          <span class="status-value" data-count-to="0" data-suffix=" threats detected">0 threats detected</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="section section-alt" id="about">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">01 // ABOUT ME</span>
-      </div>
-
-      <div class="about-grid">
-        <div class="terminal-window reveal">
-          <div class="terminal-head">
-            <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
-            <span class="frame-title">whoami.sh</span>
+  <main>
+    <section id="hero" class="hero bp-grid">
+      <canvas id="matrix"></canvas>
+      <div class="hero-glow"></div>
+      <div class="float-symbol symbol-server">▣</div>
+      <div class="float-symbol symbol-cloud">☁</div>
+      <div class="float-symbol symbol-db">◈</div>
+      <div class="container hero-grid">
+        <div>
+          <div class="terminal mb-32">
+            <div class="terminal-head"><i></i><i></i><i></i><span>david-server — bash</span></div>
+            <div id="terminalBody" class="terminal-body mono"></div>
           </div>
-          <div class="terminal-body mono">
-            <p><span class="prompt">&gt;</span> whoami</p>
-            <p class="out">David Helmi Bahari</p>
-            <p class="out-label">Role:</p>
-            <p class="out">IT Infrastructure &amp; Technical Support Engineer</p>
-            <p class="out-label">Experience:</p>
-            <p class="out">5+ Years</p>
-            <p class="out-label">Focus:</p>
-            <p class="out">Infrastructure&nbsp;/&nbsp;Networking&nbsp;/&nbsp;System Administration&nbsp;/&nbsp;Technical Support&nbsp;/&nbsp;IT Operations</p>
-            <p class="out-label">Status:</p>
-            <p class="out accent-text">AVAILABLE FOR NEW CHALLENGES</p>
-            <p class="term-cursor-line"><span class="prompt">&gt;</span> <span class="blink-cursor">_</span></p>
+          <h1>David Helmi Bahari</h1>
+          <p class="role">IT Infrastructure & Support Engineer</p>
+          <p class="tagline">Building reliable IT infrastructure, providing technical support, and solving complex IT challenges.</p>
+          <div class="meta">
+            <span>⌖ Kota Tangerang, Indonesia</span>
+            <span>✉ david.helmibahari@gmail.com</span>
+            <a href="https://linkedin.com/in/davidhelmi" target="_blank">in LinkedIn</a>
+            <a href="https://github.com/namalengkap" target="_blank">◉ GitHub</a>
+          </div>
+          <div class="actions">
+            <button class="primary" id="downloadResume">⇩ Download Resume</button>
+            <button class="secondary" data-scroll="contact">◉ Contact Me</button>
+            <button class="secondary" data-scroll="projects">◉ View Projects</button>
           </div>
         </div>
-
-        <div class="about-copy reveal">
-          <h3>Professional Summary</h3>
-          <p>IT Infrastructure &amp; Technical Support professional with <strong>5+ years of experience</strong> in IT infrastructure, technical support, network administration, system implementation, asset management, and IT operations.</p>
-          <p>Experienced in maintaining reliable IT environments, troubleshooting hardware and software issues, managing network infrastructure, supporting end users, and coordinating IT vendors and operational requirements across healthcare and manufacturing environments.</p>
-          <div class="about-focus">
-            <span class="focus-chip">IT Infrastructure</span>
-            <span class="focus-chip">Network Administration</span>
-            <span class="focus-chip">System Administration</span>
-            <span class="focus-chip">Technical Support</span>
-            <span class="focus-chip">IT Operations</span>
-            <span class="focus-chip">IT Asset Management</span>
-            <span class="focus-chip">Infrastructure Monitoring</span>
-            <span class="focus-chip">Troubleshooting</span>
-            <span class="focus-chip">System Implementation</span>
+        <div class="hero-side">
+          <div class="avatar">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <path d="M0 40 H60 V0 M200 60 H140 V0 M0 150 H50 V200 M200 140 H150 V200 M0 100 H30 M200 100 H170" stroke="currentColor" stroke-width="1" fill="none"/>
+              <circle cx="60" cy="40" r="3" fill="currentColor"/><circle cx="140" cy="60" r="3" fill="currentColor"/>
+            </svg>
+            <strong>DB</strong><span class="scan"></span>
+          </div>
+          <div class="access">✓ ACCESS: GRANTED</div>
+          <div class="topology">
+            <svg viewBox="0 0 300 300">
+              <g class="links">
+                <line x1="150" y1="150" x2="150" y2="40"/><line x1="150" y1="150" x2="40" y2="150"/>
+                <line x1="150" y1="150" x2="260" y2="150"/><line x1="150" y1="150" x2="150" y2="260"/>
+              </g>
+              <g class="nodes">
+                <circle cx="150" cy="40" r="24"/><circle cx="40" cy="150" r="24"/><circle cx="260" cy="150" r="24"/>
+                <circle cx="150" cy="260" r="24"/><circle cx="150" cy="150" r="30"/>
+              </g>
+              <text x="150" y="46">☁</text><text x="40" y="156">▣</text><text x="260" y="156">◉</text>
+              <text x="150" y="266">◆</text><text x="150" y="157">⌁</text>
+            </svg>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="scroll-down">⌄</div>
+    </section>
 
-  <!-- ============ CORE EXPERTISE ============ -->
-  <section class="section" id="skills">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">02 // CORE EXPERTISE</span>
-        <h2>What I Work With Every Day</h2>
+    <section id="status" class="status-section">
+      <div class="container">
+        <div class="eyebrow">◉ System Status</div>
+        <div id="statusGrid" class="status-grid"></div>
       </div>
+    </section>
 
-      <div class="expertise-grid">
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.4" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.4" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="7" r="0.9" fill="currentColor"/><circle cx="7" cy="17" r="0.9" fill="currentColor"/></svg>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-label"><span>01</span><h2>About Me</h2><hr></div>
+        <div class="about-grid reveal">
+          <div class="terminal">
+            <div class="terminal-head"><i></i><i></i><i></i><span>cat about.txt</span></div>
+            <div class="terminal-body about-copy"><b>&gt;</b> Experienced <strong>IT Infrastructure & Support Engineer</strong> specializing in IT infrastructure management, hardware and software troubleshooting, system availability, and technical support for business operations. Skilled at working under strict SLA requirements and passionate about transforming complex technical challenges into stable, reliable, and efficient solutions.</div>
           </div>
-          <h4>Infrastructure</h4>
-          <ul>
-            <li>IT Infrastructure</li>
-            <li>Server Management</li>
-            <li>VMware</li>
-            <li>Synology NAS</li>
-            <li>Backup Management</li>
-            <li>Infrastructure Monitoring</li>
-          </ul>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="4.5" r="1.6" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M12 6.1V12M12 12L5 17.5M12 12l7 5.5" stroke="currentColor" stroke-width="1.6"/></svg>
-          </div>
-          <h4>Networking</h4>
-          <ul>
-            <li>LAN / WAN</li>
-            <li>TCP/IP</li>
-            <li>DHCP</li>
-            <li>DNS</li>
-            <li>MikroTik</li>
-            <li>Network Troubleshooting</li>
-          </ul>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3.5" width="16" height="11" rx="1.4" stroke="currentColor" stroke-width="1.6"/><path d="M9 19.5h6M12 14.5v5" stroke="currentColor" stroke-width="1.6"/></svg>
-          </div>
-          <h4>System</h4>
-          <ul>
-            <li>Windows</li>
-            <li>Windows Server</li>
-            <li>System Administration</li>
-            <li>User Management</li>
-            <li>File Sharing</li>
-            <li>Access Control</li>
-          </ul>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3.2v5.4c0 4.4-3 7.9-7 9.2-4-1.3-7-4.8-7-9.2V6.2L12 3z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12.2l2.1 2.1 4-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h4>Technical Support</h4>
-          <ul>
-            <li>Hardware Troubleshooting</li>
-            <li>Software Troubleshooting</li>
-            <li>End User Support</li>
-            <li>Incident Management</li>
-            <li>Root Cause Analysis</li>
-          </ul>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5v4.7l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </div>
-          <h4>IT Operations</h4>
-          <ul>
-            <li>IT Asset Management</li>
-            <li>Vendor Management</li>
-            <li>IT Documentation</li>
-            <li>System Implementation</li>
-            <li>Operational Support</li>
-          </ul>
+          <div id="aboutCards" class="about-cards"></div>
         </div>
       </div>
+    </section>
 
-      <!-- Skills radar -->
-      <div class="radar-wrap reveal">
-        <div class="radar-canvas-holder">
-          <canvas id="radarCanvas" width="420" height="420"></canvas>
+    <section id="resume" class="section alternate">
+      <div class="container">
+        <div class="section-label"><span>02</span><h2>Professional Resume</h2><hr></div>
+        <div id="experience" class="timeline"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-label"><span>03</span><h2>Technical Dashboard</h2><hr></div>
+        <div class="dashboard-grid">
+          <div class="terminal reveal"><div class="terminal-head"><i></i><i></i><i></i><span>network_core.sh</span></div><div class="terminal-body"><p class="eyebrow">Network Core</p><div id="networkSkills"></div></div></div>
+          <div class="terminal reveal"><div class="terminal-head"><i></i><i></i><i></i><span>server_env.sh</span></div><div class="terminal-body"><p class="eyebrow">Server Environment</p><div id="serverEnv" class="mini-grid"></div></div></div>
+          <div class="terminal reveal"><div class="terminal-head"><i></i><i></i><i></i><span>security_module.sh</span></div><div class="terminal-body"><p class="eyebrow">Security Module</p><div id="securityModule" class="security-list"></div></div></div>
         </div>
-        <div class="radar-legend">
-          <h3>Skill Matrix — Self Assessment</h3>
-          <p class="section-sub">A relative view of focus areas, not a formal certification score.</p>
-          <ul class="radar-list">
-            <li><span></span>Infrastructure</li>
-            <li><span></span>Networking</li>
-            <li><span></span>System Administration</li>
-            <li><span></span>Technical Support</li>
-            <li><span></span>IT Operations</li>
-            <li><span></span>Asset Management</li>
-          </ul>
+        <div class="cloud-panel reveal"><p class="eyebrow">Cloud & Support</p><div id="cloudSupport" class="chips"></div></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alternate">
+      <div class="container">
+        <div class="section-label"><span>04</span><h2>Mission Database</h2><hr></div>
+        <div id="missions" class="project-grid"></div>
+      </div>
+    </section>
+
+
+    <section id="game" class="section game-section alternate">
+      <div class="container">
+        <div class="section-label">
+          <span>09</span>
+          <h2>Network Defender</h2>
+          <hr>
         </div>
-      </div>
 
-      <!-- Tech stack -->
-      <div class="techstack reveal">
-        <h3 class="techstack-title">TECH STACK</h3>
-        <div class="tech-grid" id="techGrid"></div>
-        <div class="tech-tooltip" id="techTooltip"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EXPERIENCE ============ -->
-  <section class="section section-alt" id="experience">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">03 // EXPERIENCE TIMELINE</span>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-marker"><span class="pulse-dot"></span></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <span class="log-tag log-tag-live">CURRENT</span>
-              <span class="timeline-date">2026 — Present</span>
-            </div>
-            <h3>IT Support Technical Service</h3>
-            <p class="timeline-org">PT Samco Farma</p>
-            <ul>
-              <li>IT infrastructure support</li>
-              <li>Hardware &amp; software troubleshooting</li>
-              <li>Network maintenance</li>
-              <li>End-user support</li>
-              <li>IT asset management</li>
-              <li>Operational IT support</li>
-            </ul>
+        <div class="game-intro">
+          <div>
+            <p class="eyebrow">MINI GAME // INFRASTRUCTURE SIMULATION</p>
+            <h3>Protect the Core.</h3>
+            <p class="game-description">
+              Incoming packets are attacking the infrastructure. Click the threats
+              before they reach the central core. Survive as many waves as possible.
+            </p>
+          </div>
+          <div class="game-score">
+            <span>SCORE</span>
+            <b id="gameScore">000000</b>
           </div>
         </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-marker"><span class="static-dot"></span></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <span class="log-tag">ARCHIVED</span>
-              <span class="timeline-date">2021 — 2026</span>
-            </div>
-            <h3>IT Infrastructure &amp; General Affair</h3>
-            <p class="timeline-org">Laboratorium &amp; Klinik Utama ScanMe Labs <span class="org-alt">(PT Anugrah Prakarsa Hutama)</span></p>
-            <ul>
-              <li>Infrastructure management</li>
-              <li>Network maintenance</li>
-              <li>Synology NAS administration</li>
-              <li>Backup management</li>
-              <li>Hardware/software troubleshooting</li>
-              <li>IT asset management</li>
-              <li>Vendor coordination</li>
-              <li>End-user support</li>
-            </ul>
+        <div class="game-shell" id="networkDefender">
+          <canvas id="gameCanvas"></canvas>
+
+          <div class="game-hud">
+            <div><span>WAVE</span><b id="gameWave">01</b></div>
+            <div><span>CORE</span><b id="gameCore">100%</b></div>
+            <div><span>THREAT</span><b id="gameThreat">LOW</b></div>
           </div>
+
+          <div class="game-overlay" id="gameOverlay">
+            <div class="game-kicker">SYSTEM // NETWORK DEFENDER</div>
+            <h3 id="gameTitle">Protect the Core</h3>
+            <p id="gameInstruction">
+              Destroy incoming packets before they reach the center.<br>
+              Desktop: mouse &nbsp;•&nbsp; Mobile: touch
+            </p>
+            <button id="gameStart" class="primary" type="button">START MISSION</button>
+          </div>
+
+          <div class="game-toast" id="gameToast"></div>
         </div>
       </div>
+    </section>
 
-      <!-- Education -->
-      <div class="section-head reveal" style="margin-top:80px;">
-        <span class="tag-label">EDUCATION</span>
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-label"><span>05</span><h2>Certifications</h2><hr></div>
+        <div id="certificationsGrid" class="cert-grid"></div>
       </div>
-      <div class="cred-grid reveal">
-        <div class="cred-col">
-          <h4 class="cred-heading">degrees/</h4>
-          <div class="cred-card">
-            <span class="cred-icon">🎓</span>
-            <div>
-              <h5>Universitas Bakrie</h5>
-              <p>Bachelor of Information Systems — GPA 3.29</p>
-              <span class="cred-date">Sep 2022 – Feb 2025</span>
+    </section>
+
+    <section id="stack" class="section alternate">
+      <div class="container">
+        <div class="section-label"><span>06</span><h2>Tools & Technology Stack</h2><hr></div>
+        <div id="stackGrid" class="stack-grid"></div>
+        <div class="achievements-wrap">
+          <div class="section-label"><span>07</span><h2>Achievements</h2><hr></div>
+          <div id="achievements" class="achievement-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-label"><span>08</span><h2>Get In Touch</h2><hr></div>
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="contact-copy">Terbuka untuk peluang penuh waktu, kontrak, maupun kolaborasi project infrastruktur IT. Silakan hubungi lewat form atau kontak berikut.</p>
+            <div class="contact-links mono">
+              <a href="mailto:david.helmibahari@gmail.com">✉ david.helmibahari@gmail.com</a>
+              <a href="https://wa.me/6281200000000" target="_blank">◉ +62 812-0000-0000</a>
+              <a href="https://linkedin.com/in/davidhelmi" target="_blank">in linkedin.com/in/davidhelmi</a>
+              <a href="https://github.com/namalengkap" target="_blank">◉ github.com/namalengkap</a>
             </div>
           </div>
-          <div class="cred-card">
-            <span class="cred-icon">🎓</span>
-            <div>
-              <h5>Politeknik Negeri Jember</h5>
-              <p>Associate Degree, Informatics Management — GPA 3.61</p>
-              <span class="cred-date">Jul 2017 – Oct 2020</span>
-            </div>
-          </div>
-        </div>
-        <div class="cred-col">
-          <h4 class="cred-heading">certifications/</h4>
-          <div class="cred-card">
-            <span class="cred-icon">📜</span>
-            <div>
-              <h5>Fortinet NSE Level 3: Certified Associate</h5>
-              <p>Fortinet Training Institute</p>
-            </div>
-          </div>
-          <div class="cred-card">
-            <span class="cred-icon">📜</span>
-            <div>
-              <h5>Network Support &amp; Security</h5>
-              <p>Cisco Networking Academy</p>
-            </div>
-          </div>
+          <form id="contactForm" class="reveal">
+            <div class="form-row"><input name="name" placeholder="Name" required><input name="email" type="email" placeholder="Email" required></div>
+            <input name="subject" placeholder="Subject">
+            <textarea name="message" rows="5" placeholder="Message" required></textarea>
+            <button class="primary" type="submit">➤ Send Message</button>
+            <p id="sentMessage" class="success hidden">message queued — this is a demo form with no backend wired up yet.</p>
+          </form>
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><b>David Helmi Bahari,S.Kom.</b><small>IT Infrastructure & Support Engineer</small></div>
+      <div class="social"><a href="https://github.com/namalengkap" target="_blank">GitHub</a><a href="https://linkedin.com/in/davidhelmi" target="_blank">LinkedIn</a><a href="mailto:david.helmibahari@gmail.com">Email</a></div>
+      <small>© <span id="year"></span> David Helmi Bahari,S.Kom. All rights reserved.</small>
     </div>
-  </section>
+  </footer>
+  <script>
+const PROFILE={name:"David Helmi Bahari,S.Kom.",role:"IT Infrastructure & Support Engineer",email:"david.helmibahari@gmail.com",whatsapp:"+62 812-0000-0000"};
+const NAV=[["about","About"],["status","Status"],["resume","Resume"],["skills","Dashboard"],["projects","Missions"],["game","Game"],["certifications","Certs"],["stack","Stack"],["contact","Contact"]];
+const STATUS=[["🟢","Network","Online","green"],["🟢","Server Cluster","Running","green"],["🟢","Security Layer","Enabled","green"],["🔵","Monitoring","Active","blue"],["🟡","Backup Job","Maintenance","amber"]];
+const EXPERIENCE=[
+["IT Support Technical Service","PT Samco Farma","May 2026 — Present",["Maintain 24/7 availability and reliability of IT infrastructure, including LAN/WAN, TCP/IP networks, hardware, software, Synology NAS, PCs, laptops, printers, and end-user devices","Perform deployment, configuration, preventive maintenance, and troubleshooting of IT equipment, systems, and network infrastructure","Administer Synology NAS environments, including data backup and recovery, file sharing, user access management, and storage monitoring","Administer corporate email services via cPanel, including email account creation, configuration, password management, and email troubleshooting","Manage IT asset inventory through asset tracking, documentation, monitoring, and lifecycle control","Provide end-user technical support and resolve incidents and service requests to ensure smooth business operations"]],
+["IT Infrastructure & General Affairs","Laboratorium & Klinik Utama ScanMe Labs","Mar 2021 — Apr 2026",["Maintain the stability and availability of IT infrastructure (network, software, hardware, VMware servers, SIMRS/LIS, IPPBX, IP phones, PCs, laptops, printers, CCTV, and end-user devices) ensuring optimal 24/7 uptime","Manage IT procurement, inventory, and asset control, including office facilities","Provide technical support for SIMRS & LIS systems and assist in feature development based on operational needs","Ensure data security, access control, routine backups, and proactive system maintenance","Manage employee database, attendance, leave, payroll processing, BPJS administration (SIPP & E-Dabu), and employment contracts","Handle and support company legal and licensing processes (OSS RBA & Jakevo)","Oversee and maintain office facilities to ensure safety, efficiency, and productivity","Coordinate with vendors, building management, security, office support staff, and internal teams to maintain a safe, clean, and efficient working environment"]],
+["IT Support Specialist","RS National Hospital Surabaya","Feb 2021 — Mar 2021",["Provide support to fix software and hardware problems (PC, Printer, Scanner, IPPhone, IPPBX and network devices) etc","Ensure all devices and systems are functioning properly","Perform installation, configuration, and maintenance of software and hardware","Provide SIMRS technical support to hospital staff (Remote / Direct)"]],
+["Student Intern","PT Global Sukses Solusi Tbk (RUN System)","Sep 2019 — Dec 2019",["Facilitate all Scrum events including sprint planning, daily stand-ups, sprint reviews, and retrospectives","Foster collaboration and effective communication among cross-functional team members","Mentor and coach the team in the application of Agile and Scrum practices","Collaborate with Product Owner to ensure clear backlog and proper prioritization","Track and report on team performance metrics such as burn-down charts and velocity"]]
+];
+const NETWORK=[["TCP/IP",95],["LAN/WAN",90],["Firewall",85],["VPN",88],["Routing & Switching",92],["VLAN",87]];
+const SERVER=["▣ Windows Server","⌁ Linux Server","▰ VMware","◆ Synology NAS","▣ Hyper-V","◉ Active Directory"];
+const SECURITY=["◉ Fortinet","▣ Network Security","◉ Access Control","◆ Backup Strategy","◉ VPN Security","◈ Endpoint Protection"];
+const CLOUD=["Microsoft Azure","AWS","Google Cloud","Incident Management","Ticketing System (ITSM)","Remote Support"];
+const MISSIONS=[
+["INFRA-001","Enterprise Infrastructure Deployment","Production Server",["VMware","Network","NAS","Security"],["Deploy Infrastructure","Configure Network","Secure Access","Monitor System"],"COMPLETED"],
+["INFRA-002","Network Infrastructure Upgrade","Enterprise Network",["Cisco","VLAN","Firewall","VPN"],["Audit Topology","Segment VLAN","Harden Firewall Rules","Validate Uptime"],"COMPLETED"],
+["INFRA-003","IT Support Automation","Internal Operations",["PowerShell","Python","Scripting"],["Identify Recurring Tickets","Build Automation Script","Deploy To Helpdesk","Measure MTTR"],"IN PROGRESS"]
+];
+const CERTS=[["CompTIA A+","2020"],["CompTIA Network+","2021"],["Cisco CCNA","2022"],["Microsoft Azure Fundamentals (AZ-900)","2022"],["Microsoft Administrator Certification","2023"],["ITIL Foundation","2023"],["VMware Certification","2024"]];
+const STACK=[["Operating System",["Windows","Linux"]],["Network",["Cisco","Mikrotik","Fortigate"]],["Cloud",["Azure","AWS"]],["Virtualization",["VMware","Hyper-V"]],["Monitoring",["Zabbix","PRTG"]],["Ticketing",["Jira","ServiceNow","ManageEngine"]]];
+const ACH=[["-42%","IT downtime reduced through proactive monitoring","◔"],["12","Infrastructure services successfully migrated","▣"],["300+","Enterprise users supported across branches","✓"],["4h","Average incident response time, down from 1 day","▤"]];
 
-  <!-- ============ INFRASTRUCTURE ARCHITECTURE ============ -->
-  <section class="section" id="infrastructure">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">04 // INFRASTRUCTURE ARCHITECTURE</span>
-        <h2>INFRASTRUCTURE ARCHITECTURE</h2>
-        <p class="section-sub">Click a node to inspect it. Data packets are animated for illustration.</p>
-      </div>
+const $=s=>document.querySelector(s);
+const $$=s=>document.querySelectorAll(s);
+function renderNav(){
+  const d=$("#desktopNav"),m=$("#mobileNav"); NAV.forEach(([id,label])=>{d.insertAdjacentHTML("beforeend",`<button data-scroll="${id}">${label}</button>`);m.insertAdjacentHTML("beforeend",`<button data-scroll="${id}">${label}</button>`)});bindScroll();}
+function bindScroll(){$$("[data-scroll]").forEach(b=>b.addEventListener("click",()=>{const e=$("#"+b.dataset.scroll);if(e)e.scrollIntoView({behavior:"smooth"});$("#mobileNav").classList.remove("open")}))}
+function renderStatus(){$("#statusGrid").innerHTML=STATUS.map(x=>`<div class="status-card"><div class="status-name">${x[0]} ${x[1]}</div><div class="status-state ${x[3]}">${x[2].toUpperCase()}</div></div>`).join("")}
+function renderAbout(){$("#aboutCards").innerHTML=["▣ Infrastructure Management","⌁ System Administration","◉ Network Support","▣ Security Awareness","⌁ IT Troubleshooting","✓ User Support"].map(x=>`<div class="about-card"><span class="ico">${x[0]}</span>${x.slice(2)}</div>`).join("")}
+function renderExperience(){$("#experience").innerHTML=EXPERIENCE.map(e=>`<article class="experience reveal"><div class="exp-head"><h3>${e[0]}</h3><span class="period">${e[2]}</span></div><div class="company">▣ ${e[1]}</div><ul>${e[3].map(p=>`<li>${p}</li>`).join("")}</ul></article>`).join("")}
+function renderSkills(){$("#networkSkills").innerHTML=NETWORK.map(s=>{let n=Math.round(s[1]/10);return `<div class="skill"><div class="skill-top"><span>${s[0]}</span><b>${s[1]}%</b></div><div class="bar">[<span>${"█".repeat(n)}</span><span class="empty">${"░".repeat(10-n)}</span>]</div></div>`}).join("");$("#serverEnv").innerHTML=SERVER.map(x=>`<div class="mini-card"><span class="ico">${x[0]}</span>${x.slice(2)}</div>`).join("");$("#securityModule").innerHTML=SECURITY.map(x=>`<div class="security-item"><span class="left">${x}</span><span class="active-badge">ACTIVE</span></div>`).join("");$("#cloudSupport").innerHTML=CLOUD.map(x=>`<span class="chip">${x}</span>`).join("")}
+function renderProjects(){$("#missions").innerHTML=MISSIONS.map(m=>`<article class="terminal project-card reveal"><div class="terminal-head"><i></i><i></i><i></i><span>[PROJECT ID: ${m[0]}]</span></div><div class="terminal-body project-card"><h3 class="project-title">${m[1]}</h3><div class="env">ENV: ${m[2]}</div><div class="commands">${m[4].map(c=>`<div><b>&gt;</b> ${c}</div>`).join("")}</div><div class="tech-tags">${m[3].map(t=>`<span class="tech-tag">${t}</span>`).join("")}</div><div class="project-status"><span>STATUS:</span><span class="status-badge ${m[5]==="COMPLETED"?"success-bg":"progress-bg"}">${m[5]==="COMPLETED"?"SUCCESS":m[5]}</span></div></div></article>`).join("")}
+function renderCerts(){$("#certificationsGrid").innerHTML=CERTS.map(c=>`<div class="cert-card reveal"><div class="cert-left"><span class="cert-icon">★</span><div><div class="cert-name">${c[0]}</div><div class="cert-year">Issued ${c[1]}</div></div></div><a class="ext" href="#" aria-label="View credential">↗</a></div>`).join("")}
+function renderStack(){$("#stackGrid").innerHTML=STACK.map(g=>`<div class="stack-card reveal"><div class="stack-group">${g[0]}</div><div class="stack-items">${g[1].map(x=>`<span class="stack-item">${x}</span>`).join("")}</div></div>`).join("");$("#achievements").innerHTML=ACH.map(a=>`<div class="achievement reveal"><div class="ico">${a[2]}</div><div class="stat">${a[0]}</div><div class="desc">${a[1]}</div></div>`).join("")}
+function reveal(){const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("shown");obs.unobserve(e.target)}}),{threshold:.12});$$(".reveal").forEach(e=>obs.observe(e))}
+function terminal(){const lines=[["root@david-server:~$ whoami","IT Infrastructure & Support Engineer"],["root@david-server:~$ system_status","[ONLINE] [NETWORK: ACTIVE] [SERVER: RUNNING] [SECURITY: ENABLED]"]];let i=0;const box=$("#terminalBody");function next(){if(i>=lines.length*2)return;const l=lines[Math.floor(i/2)];if(i%2===0)box.insertAdjacentHTML("beforeend",`<div>${l[0]}</div>`);else box.insertAdjacentHTML("beforeend",`<div style="color:${l[1][0]==="["?"#22C55E":"#7EE8FA"}">${l[1]}</div>`);i++;setTimeout(next,500)}next()}
+function matrix(){const c=$("#matrix"),ctx=c.getContext("2d"),chars="01";let w,h,cols,drops;function resize(){w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;cols=Math.floor(w/14);drops=Array.from({length:cols},()=>Math.floor(Math.random()*-40))}resize();addEventListener("resize",resize);function draw(){ctx.fillStyle=document.body.classList.contains("dark")?"rgba(4,7,13,.16)":"rgba(241,244,250,.22)";ctx.fillRect(0,0,w,h);ctx.font="14px monospace";for(let i=0;i<cols;i++){ctx.fillStyle=document.body.classList.contains("dark")?"rgba(56,189,248,.55)":"rgba(59,130,246,.3)";ctx.fillText(chars[Math.random()*2|0],i*14,drops[i]*14);if(drops[i]*14>h&&Math.random()>.975)drops[i]=0;drops[i]++}requestAnimationFrame(draw)}draw()}
+function activeNav(){const ids=NAV.map(x=>x[0]);addEventListener("scroll",()=>{let current="about";ids.forEach(id=>{const e=$("#"+id);if(e&&e.getBoundingClientRect().top<=140)current=id});$$("#desktopNav button").forEach(b=>b.classList.toggle("active",b.dataset.scroll===current))},{passive:true})}
+function downloadResume(){const text=`${PROFILE.name} — ${PROFILE.role}\nKota Tangerang, Indonesia | ${PROFILE.email} | linkedin.com/in/davidhelmi\n\nEXPERIENCE\n${EXPERIENCE.map(e=>`${e[0]} — ${e[1]} (${e[2]})\n${e[3].map(p=>"  - "+p).join("\n")}`).join("\n\n")}\n\nNETWORK CORE\n${NETWORK.map(s=>`${s[0]}: ${s[1]}%`).join("\n")}\n\nCERTIFICATIONS\n${CERTS.map(c=>`${c[0]} (${c[1]})`).join("\n")}`;const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:"text/plain"}));a.download="David_Helmi_Bahari_Resume.txt";a.click()}
+$("#themeToggle").addEventListener("click",()=>{document.body.classList.toggle("dark");document.body.classList.toggle("light");$("#themeToggle").textContent=document.body.classList.contains("dark")?"☀":"☾"});
+$("#menuToggle").addEventListener("click",()=>$("#mobileNav").classList.toggle("open"));
+$("#downloadResume").addEventListener("click",downloadResume);
+$("#contactForm").addEventListener("submit",e=>{e.preventDefault();$("#sentMessage").classList.remove("hidden");e.target.reset();setTimeout(()=>$("#sentMessage").classList.add("hidden"),4000)});
+$("#year").textContent=new Date().getFullYear();
+renderNav();renderStatus();renderAbout();renderExperience();renderSkills();renderProjects();renderCerts();renderStack();terminal();matrix();activeNav();setTimeout(reveal,50);
 
-      <div class="infra-wrap reveal">
-        <div class="infra-canvas-holder">
-          <canvas id="infraCanvas"></canvas>
-        </div>
-        <div class="infra-panel" id="infraPanel">
-          <div class="infra-panel-head">
-            <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
-            <span class="frame-title">device_info.log</span>
-          </div>
-          <div class="infra-panel-body mono" id="infraPanelBody">
-            <p class="out-label">SELECT A NODE</p>
-            <p class="out muted">Click any device in the diagram to view its role and status.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section class="section section-alt" id="projects">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">05 // PROJECTS &amp; RESPONSIBILITIES</span>
-      </div>
+/* =========================================================
+   NETWORK DEFENDER
+   ========================================================= */
+(function(){
+  const canvas=$("#gameCanvas"), shell=$("#networkDefender"), start=$("#gameStart");
+  if(!canvas||!shell||!start)return;
+  const ctx=canvas.getContext("2d");
+  let dpr=Math.min(devicePixelRatio||1,2),w=0,h=0;
+  let running=false,last=0,spawnTimer=0,elapsed=0;
+  let score=0,core=100,wave=1;
+  let enemies=[],particles=[],shots=[];
+  const pointer={x:0,y:0,active:false};
 
-      <div class="projects-grid">
-        <div class="project-card reveal">
-          <div class="project-status ok">Ongoing</div>
-          <h3>IT Infrastructure Management</h3>
-          <p>Infrastructure monitoring, maintenance, troubleshooting, and operational support across server and network environments.</p>
-          <div class="project-meta">
-            <span><b>Role:</b> IT Infrastructure Engineer</span>
-            <span><b>Impact:</b> Sustained 24/7 infrastructure availability</span>
-          </div>
-          <div class="project-tags"><span>VMware</span><span>Windows Server</span><span>Monitoring</span></div>
-        </div>
+  function resize(){
+    const r=shell.getBoundingClientRect();
+    w=r.width;h=r.height;
+    canvas.width=Math.floor(w*dpr);canvas.height=Math.floor(h*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    if(!pointer.active){pointer.x=w/2;pointer.y=h/2}
+  }
 
-        <div class="project-card reveal">
-          <div class="project-status ok">Ongoing</div>
-          <h3>Synology NAS &amp; Backup</h3>
-          <p>File sharing, access control, backup management, and storage administration for business-critical data.</p>
-          <div class="project-meta">
-            <span><b>Role:</b> Storage &amp; Backup Administrator</span>
-            <span><b>Impact:</b> Reliable recovery &amp; data protection</span>
-          </div>
-          <div class="project-tags"><span>Synology NAS</span><span>Backup &amp; Recovery</span><span>Access Control</span></div>
-        </div>
+  function hud(){
+    $("#gameScore").textContent=String(score).padStart(6,"0");
+    $("#gameWave").textContent=String(wave).padStart(2,"0");
+    $("#gameCore").textContent=Math.max(0,Math.round(core))+"%";
+    $("#gameThreat").textContent=core>70?"LOW":core>35?"MEDIUM":"CRITICAL";
+    $("#gameThreat").style.color=core>35?"#38BDF8":"#FF5F56";
+  }
 
-        <div class="project-card reveal">
-          <div class="project-status ok">Ongoing</div>
-          <h3>Network Infrastructure</h3>
-          <p>LAN/WAN implementation, MikroTik configuration, TCP/IP, DHCP, DNS, and day-to-day network troubleshooting.</p>
-          <div class="project-meta">
-            <span><b>Role:</b> Network Administrator</span>
-            <span><b>Impact:</b> Stable, secure connectivity</span>
-          </div>
-          <div class="project-tags"><span>MikroTik</span><span>TCP/IP</span><span>DHCP/DNS</span></div>
-        </div>
+  function reset(){
+    score=0;core=100;wave=1;elapsed=0;spawnTimer=0;
+    enemies=[];particles=[];shots=[];hud();
+  }
 
-        <div class="project-card reveal">
-          <div class="project-status ok">Completed</div>
-          <h3>System Implementation</h3>
-          <p>Implementation and support of business applications and operational systems, including hospital information systems.</p>
-          <div class="project-meta">
-            <span><b>Role:</b> Implementation Support</span>
-            <span><b>Impact:</b> Smoother operational workflows</span>
-          </div>
-          <div class="project-tags"><span>SIMRS/LIS</span><span>Talenta Mekari</span><span>Coordination</span></div>
-        </div>
+  function spawnEnemy(){
+    const edge=Math.floor(Math.random()*4), pad=14;
+    let x,y;
+    if(edge===0){x=Math.random()*w;y=-pad}
+    else if(edge===1){x=w+pad;y=Math.random()*h}
+    else if(edge===2){x=Math.random()*w;y=h+pad}
+    else{x=-pad;y=Math.random()*h}
+    enemies.push({
+      x,y,r:4+Math.random()*4,
+      speed:22+wave*3+Math.random()*18,
+      heavy:Math.random()<Math.min(.12+wave*.012,.28)
+    });
+  }
 
-        <div class="project-card reveal">
-          <div class="project-status ok">Ongoing</div>
-          <h3>IT Asset Management</h3>
-          <p>Asset inventory, lifecycle management, monitoring, and end-user device management across 100+ IT devices.</p>
-          <div class="project-meta">
-            <span><b>Role:</b> Asset &amp; Operations Coordinator</span>
-            <span><b>Impact:</b> Accurate, auditable asset control</span>
-          </div>
-          <div class="project-tags"><span>Asset Tracking</span><span>Vendor Mgmt</span><span>Documentation</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  function burst(x,y,good){
+    for(let i=0;i<(good?12:16);i++){
+      const a=Math.random()*Math.PI*2,s=25+Math.random()*85;
+      particles.push({
+        x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,
+        life:.45+Math.random()*.45,good
+      });
+    }
+  }
 
-  <!-- ============ INCIDENT RESPONSE ============ -->
-  <section class="section" id="incident">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">06 // INCIDENT RESPONSE</span>
-        <h2>How I Work Through a Problem</h2>
-        <p class="section-sub">Illustrative example ticket — a simulation to demonstrate troubleshooting process, not a real live incident.</p>
-      </div>
+  function shoot(x,y){
+    const a=Math.atan2(y-h/2,x-w/2);
+    shots.push({x:w/2,y:h/2,vx:Math.cos(a)*650,vy:Math.sin(a)*650,life:.65});
+  }
 
-      <div class="incident-wrap reveal">
-        <div class="incident-ticket mono">
-          <div class="incident-head">
-            <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
-            <span class="frame-title">incident_IT-2026-081.log</span>
-          </div>
-          <div class="incident-body">
-            <p><span class="out-label">INCIDENT</span> #IT-2026-081</p>
-            <p><span class="out-label">STATUS</span> <span id="incidentStatus" class="accent-text">RESOLVED</span></p>
-            <p><span class="out-label">ISSUE</span> Network connectivity interruption</p>
-            <p><span class="out-label">DETECTION</span> 09:14</p>
-            <p><span class="out-label">ROOT CAUSE</span> Switch configuration issue</p>
-            <p><span class="out-label">ACTION</span> Configuration restored</p>
-            <p><span class="out-label">RESOLUTION</span> 09:27</p>
-            <p><span class="out-label">DOWNTIME</span> 13 Minutes</p>
-          </div>
-        </div>
+  function clickTarget(x,y){
+    for(let i=enemies.length-1;i>=0;i--){
+      const e=enemies[i];
+      if(Math.hypot(x-e.x,y-e.y)<e.r+14){
+        score+=e.heavy?25:10;
+        burst(e.x,e.y,true);
+        enemies.splice(i,1);
+        hud();
+        return;
+      }
+    }
+  }
 
-        <div class="incident-stepper">
-          <div class="step" data-step="0"><span class="step-dot"></span><span>DETECTED</span></div>
-          <div class="step" data-step="1"><span class="step-dot"></span><span>ANALYZING</span></div>
-          <div class="step" data-step="2"><span class="step-dot"></span><span>TROUBLESHOOTING</span></div>
-          <div class="step" data-step="3"><span class="step-dot"></span><span>RESOLVED</span></div>
-          <button class="btn btn-ghost btn-sm" id="replayIncident">Replay Simulation</button>
-        </div>
-      </div>
-    </div>
-  </section>
+  function pointerEvent(e){
+    const r=canvas.getBoundingClientRect();
+    pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.active=true;
+    clickTarget(pointer.x,pointer.y);shoot(pointer.x,pointer.y);
+  }
 
-  <!-- ============ TERMINAL ============ -->
-  <section class="section section-alt" id="terminal-section">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">07 // INTERACTIVE TERMINAL</span>
-      </div>
+  canvas.addEventListener("pointermove",e=>{
+    const r=canvas.getBoundingClientRect();
+    pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.active=true;
+  });
+  canvas.addEventListener("pointerdown",pointerEvent);
+  addEventListener("resize",resize);
+  resize();
 
-      <div class="terminal-window terminal-interactive reveal" id="terminalWindow">
-        <div class="terminal-head">
-          <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
-          <span class="frame-title">david@infrastructure:~</span>
-        </div>
-        <div class="terminal-body mono" id="terminalOutput">
-          <p class="out muted">Type <span class="accent-text">help</span> to see available commands.</p>
-        </div>
-        <div class="terminal-input-row mono">
-          <span class="prompt">david@infrastructure:~$</span>
-          <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal command input">
-        </div>
-      </div>
-    </div>
-  </section>
+  function startGame(){
+    reset();running=true;
+    $("#gameOverlay").classList.add("hidden");
+    last=performance.now();
+    requestAnimationFrame(loop);
+  }
 
-  <!-- ============ NETWORK ACTIVITY ============ -->
-  <section class="section" id="activity">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">08 // NETWORK ACTIVITY</span>
-        <p class="section-sub">Simulated log for portfolio visualization — not a connection to real infrastructure.</p>
-      </div>
-      <div class="activity-log reveal mono" id="activityLog"></div>
-    </div>
-  </section>
+  function gameOver(){
+    running=false;
+    $("#gameTitle").textContent="CORE COMPROMISED";
+    $("#gameInstruction").innerHTML="Final score: <b>"+String(score).padStart(6,"0")+
+      "</b><br>Restart the mission and beat your record.";
+    start.textContent="RESTART MISSION";
+    $("#gameOverlay").classList.remove("hidden");
+  }
 
-  <!-- ============ CONTACT ============ -->
-  <section class="section section-alt" id="contact">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="tag-label">09 // ESTABLISH CONNECTION</span>
-        <h2>ESTABLISH CONNECTION</h2>
-      </div>
+  start.addEventListener("click",startGame);
 
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <a class="contact-item" href="mailto:david.helmibahari@gmail.com" id="emailLink">
-            <span class="ci-label">Email</span>
-            <span class="ci-value">david.helmibahari@gmail.com</span>
-            <span class="ci-action">copy</span>
-          </a>
-          <a class="contact-item" href="https://linkedin.com/in/davidhelmi" target="_blank" rel="noopener">
-            <span class="ci-label">LinkedIn</span>
-            <span class="ci-value">linkedin.com/in/davidhelmi</span>
-            <span class="ci-action">open</span>
-          </a>
-          <a class="contact-item" href="tel:+6285816914722">
-            <span class="ci-label">Phone</span>
-            <span class="ci-value">0858-1691-4722</span>
-            <span class="ci-action">call</span>
-          </a>
-          <div class="contact-item contact-item-static">
-            <span class="ci-label">Location</span>
-            <span class="ci-value">Kota Tangerang, Indonesia</span>
-            <span class="ci-action">—</span>
-          </div>
-        </div>
+  function drawGrid(){
+    ctx.strokeStyle="rgba(56,189,248,.045)";ctx.lineWidth=1;
+    for(let x=0;x<w;x+=42){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke()}
+    for(let y=0;y<h;y+=42){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke()}
+  }
 
-        <form class="contact-form reveal" id="contactForm">
-          <label>Name<input type="text" name="name" required></label>
-          <label>Email<input type="email" name="email" required></label>
-          <label>Message<textarea name="message" rows="4" required></textarea></label>
-          <button type="submit" class="btn btn-primary btn-block">SEND TRANSMISSION</button>
-          <p class="form-note">Opens your email client with the message pre-filled — no data is stored or sent to a server.</p>
-        </form>
-      </div>
-    </div>
-  </section>
+  function drawCore(t){
+    const cx=w/2,cy=h/2,p=1+Math.sin(t*.003)*.035;
+    ctx.save();ctx.translate(cx,cy);ctx.scale(p,p);
+    for(let i=3;i>0;i--){
+      ctx.beginPath();ctx.arc(0,0,28+i*9,0,Math.PI*2);
+      ctx.strokeStyle="rgba(56,189,248,"+(.035*i)+")";ctx.stroke();
+    }
+    ctx.beginPath();ctx.arc(0,0,29,0,Math.PI*2);
+    ctx.fillStyle="rgba(6,12,20,.94)";ctx.fill();
+    ctx.strokeStyle="rgba(56,189,248,.72)";ctx.lineWidth=1.5;ctx.stroke();
+    ctx.shadowColor="#22C55E";ctx.shadowBlur=18;ctx.fillStyle="#22C55E";
+    ctx.beginPath();ctx.arc(0,0,5.5,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;
+    ctx.fillStyle="rgba(232,237,247,.6)";ctx.font="8px monospace";ctx.textAlign="center";
+    ctx.fillText("CORE",0,49);ctx.restore();
+  }
 
-</main>
+  function draw(now,dt){
+    ctx.clearRect(0,0,w,h);drawGrid();
 
-<!-- ============ FOOTER ============ -->
-<footer class="footer mono">
-  <div class="footer-inner">
-    <p class="footer-status"><span class="live-dot small"></span> SYSTEM STATUS: ONLINE</p>
-    <p class="footer-name">DAVID HELMI BAHARI</p>
-    <p class="footer-role">IT Infrastructure &amp; Technical Support Engineer</p>
-    <p class="footer-copy">© 2026 David Helmi Bahari</p>
-    <p class="footer-tag">BUILDING • MAINTAINING • TROUBLESHOOTING</p>
-  </div>
-  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
-</footer>
+    shots.forEach(s=>{
+      s.x+=s.vx*dt;s.y+=s.vy*dt;s.life-=dt;
+      ctx.fillStyle="#38BDF8";ctx.shadowColor="#38BDF8";ctx.shadowBlur=9;
+      ctx.beginPath();ctx.arc(s.x,s.y,2,0,Math.PI*2);ctx.fill();
+    });
+    shots=shots.filter(s=>s.life>0&&s.x>-20&&s.x<w+20&&s.y>-20&&s.y<h+20);
 
-<div class="toast" id="toast">Copied to clipboard</div>
+    enemies.forEach(e=>{
+      const a=Math.atan2(h/2-e.y,w/2-e.x);
+      e.x+=Math.cos(a)*e.speed*dt;e.y+=Math.sin(a)*e.speed*dt;
+      ctx.save();ctx.translate(e.x,e.y);ctx.rotate(a);
+      ctx.shadowColor=e.heavy?"#FFBD2E":"#FF5F56";ctx.shadowBlur=10;
+      ctx.fillStyle=e.heavy?"#FFBD2E":"#FF5F56";
+      ctx.beginPath();ctx.moveTo(e.r*1.6,0);ctx.lineTo(-e.r,-e.r*.8);
+      ctx.lineTo(-e.r*.6,0);ctx.lineTo(-e.r,e.r*.8);ctx.closePath();ctx.fill();
+      ctx.restore();
+    });
 
-<script src="script.js"></script>
+    for(let i=enemies.length-1;i>=0;i--){
+      const e=enemies[i];
+      if(Math.hypot(e.x-w/2,e.y-h/2)<33){
+        core-=e.heavy?12:5;burst(e.x,e.y,false);enemies.splice(i,1);
+        if(core<=0){core=0;hud();gameOver();return}
+      }
+    }
+
+    particles.forEach(p=>{
+      p.x+=p.vx*dt;p.y+=p.vy*dt;p.vx*=.97;p.vy*=.97;p.life-=dt;
+      ctx.globalAlpha=Math.max(0,p.life/.9);
+      ctx.fillStyle=p.good?"#22C55E":"#FF5F56";ctx.fillRect(p.x,p.y,2,2);
+    });
+    ctx.globalAlpha=1;particles=particles.filter(p=>p.life>0);
+
+    drawCore(now);
+
+    if(pointer.active){
+      ctx.strokeStyle="rgba(56,189,248,.11)";ctx.setLineDash([3,8]);
+      ctx.beginPath();ctx.moveTo(w/2,h/2);ctx.lineTo(pointer.x,pointer.y);ctx.stroke();
+      ctx.setLineDash([]);
+    }
+  }
+
+  function loop(now){
+    if(!running)return;
+    const dt=Math.min((now-last)/1000,.033);last=now;elapsed+=dt;
+    wave=1+Math.floor(elapsed/18);spawnTimer-=dt;
+    if(spawnTimer<=0){
+      spawnTimer=Math.max(.3,1.05-wave*.07);spawnEnemy();
+    }
+    draw(now,dt);hud();
+    if(running)requestAnimationFrame(loop);
+  }
+})();
+
+</script>
 </body>
 </html>
